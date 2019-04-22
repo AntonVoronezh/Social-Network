@@ -7,7 +7,8 @@ const MyPosts = () => {
 		<div className={classes.content}>
 			<div>New post</div>
 			<div className={classes.posts}>
-				<Post />
+				<Post message="aaaaa aaaaaa" likeCount="1"/>
+				<Post message="bbbbbb bbbbbbb" likeCount="4"/>
 			</div>
 		</div>
 	);
