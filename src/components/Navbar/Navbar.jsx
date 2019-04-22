@@ -7,9 +7,9 @@ const Navbar = () => {
 			<ul>
 				<li><a href="/profile" className={classes.item}>Profile</a></li>
 				<li><a href="/dialogs" className={`${classes.item} ${classes.active}`}>Messages</a></li>
-				{/* <li><a className={classes.item}>News</a></li>
-				<li><a className={classes.item}>Music</a></li>
-				<li><a className={classes.item}>Settings</a></li> */}
+				<li><a href="/news" className={classes.item}>News</a></li>
+				<li><a href="/music" className={classes.item}>Music</a></li>
+				<li><a href="/settings" className={classes.item}>Settings</a></li>
 			</ul>
 		</div>
 	);
