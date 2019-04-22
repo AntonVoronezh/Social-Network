@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './MyPosts.module.css';
+import Post from './Post/Post';
 
 const MyPosts = () => {
 	return (
 		<div className={classes.content}>
 			<div>New post</div>
 			<div className={classes.posts}>
-				<div className={classes.item}>post 1</div>
-				<div className={classes.item}>post 2</div>
+				<Post />
 			</div>
 		</div>
 	);
