@@ -1,0 +1,26 @@
+.wrapper { 
+  display: grid;
+ 
+ grid-template-areas:
+"header header header"
+"nav content content";
+ grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  
+}
+.header {
+  grid-area: header;
+  border: 1px solid #000000;
+  margin: 5px;
+}
+.sidebar {
+  grid-area: nav;
+  border: 1px solid #000000;
+  margin: 5px;
+}
+.content {
+  grid-area: content;
+  border: 1px solid #000000;
+  margin: 5px;
+}
