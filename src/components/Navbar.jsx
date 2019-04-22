@@ -3,13 +3,13 @@ import classes from './Navbar.module.css'
 
 const Navbar = () => {
 	return (
-		<div className="sidebar">
+		<div className={classes.sidebar}>
 			<ul>
-				<li><a>Profile</a></li>
-				<li><a>Messages</a></li>
-				<li><a>News</a></li>
-				<li><a>Music</a></li>
-				<li><a>Settings</a></li>
+				<li><a className={classes.item}>Profile</a></li>
+				<li><a className={`${classes.item} ${classes.active}`}>Messages</a></li>
+				<li><a className={classes.item}>News</a></li>
+				<li><a className={classes.item}>Music</a></li>
+				<li><a className={classes.item}>Settings</a></li>
 			</ul>
 		</div>
 	);
