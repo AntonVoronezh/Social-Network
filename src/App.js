@@ -17,13 +17,11 @@ class App extends Component {
 					<Header />
 					<Navbar />
 					<div className="content">
-						{/* <Profile /> */}
-            {/* <Dialogs /> */}
-           <Route path="/profile" component={Profile}/> 
-           <Route path="/dialogs" component={Dialogs}/> 
-           <Route path="/music" component={Music}/> 
-           <Route path="/news" component={News}/> 
-           <Route path="/settings" component={Settings}/> 
+						<Route path="/profile" component={Profile} />
+						<Route path="/dialogs" component={Dialogs} />
+						<Route path="/music" component={Music} />
+						<Route path="/news" component={News} />
+						<Route path="/settings" component={Settings} />
 					</div>
 				</div>
 			</BrowserRouter>
