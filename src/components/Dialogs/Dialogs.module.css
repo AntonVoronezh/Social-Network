@@ -1,0 +1,31 @@
+.dialogs {
+    display: flex;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.items {
+    border: 1px solid #ccc;
+    padding: 5px;
+    flex: 1;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.messages {
+    border: 1px solid #ccc;
+    padding: 5px;
+    flex: 2;
+}
+
+.message {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.active {
+    color: blue;
+}
