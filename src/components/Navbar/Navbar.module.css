@@ -4,10 +4,17 @@
     margin: 5px;
 }
 
-.item {
-    color: blue;
+.sidebar ul {
+    list-style: none;
 }
 
-.item.active{
+
+.item {
+    color: blue;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.item a.active {
     color: red;
 }
