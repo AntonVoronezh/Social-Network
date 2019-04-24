@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Dialogs.module.css';
 import Dialog from './Dialog/Dialog';
+import Message from './Message/Message';
 
 const dialogs = [
 	{ id: 1, name: '1111111' },
@@ -16,19 +17,13 @@ const messages = [
 	{ id: 3, text: '33 33 333333 3333' },
 ];
 
-
-
-const Message = props => {
-	return <div className={classes.message}>{props.text}</div>;
-};
-
-const Dialogs = props => {
+const Dialogs = () => {
 	const dialogsData = dialogs.map(d => <Dialog name={d.name} id={d.id} key={d.id} />);
 	const messagesData = messages.map(m => <Message text={m.text} id={m.id} key={m.id} />);
 
 	return (
 		<div className={classes.dialogs}>
-			<div className={classes.items}>{dialogsData}</div>;
+			<div className={classes.items}>{dialogsData}</div>
 			<div className={classes.messages}>{messagesData}</div>
 		</div>
 	);

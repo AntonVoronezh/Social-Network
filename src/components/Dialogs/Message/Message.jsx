@@ -1,16 +1,8 @@
 import React from 'react';
-import classes from './Post.module.css';
+import classes from './Message.module.css';
 
-const Post = props => {
-	return (
-		<div className={classes.item}>
-			<img src="https://r.mradx.net/pictures/16/864A92.jpg" alt="s" />
-			<br/>
-			{props.message}
-			<br/>
-			<span>{props.likeCount} likes</span>
-		</div>
-	);
+const Message = props => {
+	return <div className={classes.message}>{props.text}</div>;
 };
 
-export default Post;
+export default Message;
