@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './Dialogs.module.css';
 
-const dialogsData = [
+const dialogs = [
 	{ id: 1, name: '1111111' },
 	{ id: 2, name: '2222222' },
 	{ id: 3, name: '333333' },
@@ -10,10 +10,10 @@ const dialogsData = [
 	{ id: 5, name: '5555555' },
 	{ id: 6, name: '6666666' },
 ];
-const messagesData = [
+const messages = [
 	{ id: 1, text: '111 11111 11111 1111111' },
-	{ id: 2, name: '222 2222 22222 22222' },
-	{ id: 3, name: '33 33 333333 3333' },
+	{ id: 2, text: '222 2222 22222 22222' },
+	{ id: 3, text: '33 33 333333 3333' },
 ];
 
 const Dialog = props => {
@@ -33,19 +33,13 @@ const Message = props => {
 };
 
 const Dialogs = props => {
+	const dialogsData = dialogs.map(d => <Dialog name={d.name} id={d.id} key={d.id} />);
+	const messagesData = messages.map(m => <Message text={m.text} id={m.id} key={m.id} />);
+
 	return (
 		<div className={classes.dialogs}>
-			<div className={classes.items}>
-				<Dialog name={dialogsData[0].name} id={dialogsData[0].id} />
-				<Dialog name="2222" id="2" />
-				<Dialog name="3333" id="3" />
-				<Dialog name="4444" id="4" />
-			</div>
-			<div className={classes.messages}>
-				<Message text={messagesData[0].text} id={messagesData[0].id} />
-				<Message text="ssssss" />
-				<Message text="ddddddd" />
-			</div>
+			<div className={classes.items}>{dialogsData}</div>
+			<div className={classes.messages}>{messagesData}</div>
 		</div>
 	);
 };
