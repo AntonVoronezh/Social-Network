@@ -1,8 +1,8 @@
 .item {
-    color: green;
+    border: 1px solid fuchsia;
+    padding: 5px;
 }
 
-.item img {
-    width: 50px;
-    border-radius: 50%;
+.myActive {
+    color: blue;
 }

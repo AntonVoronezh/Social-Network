@@ -1,8 +1,5 @@
-.item {
+.message {
+    border: 1px solid green;
+    padding: 5px;
     color: green;
-}
-
-.item img {
-    width: 50px;
-    border-radius: 50%;
 }

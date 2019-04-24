@@ -10,10 +10,7 @@
     flex: 1;
 }
 
-.item {
-    border: 1px solid #ccc;
-    padding: 5px;
-}
+
 
 .itemLink {
     border: 1px solid #ccc;
@@ -26,11 +23,5 @@
     flex: 2;
 }
 
-.message {
-    border: 1px solid #ccc;
-    padding: 5px;
-}
 
-.myActive {
-    color: blue;
-}
+
