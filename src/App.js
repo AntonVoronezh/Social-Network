@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -13,19 +13,17 @@ const App = props => {
 	const { profilePage, dialogsPage } = props.state;
 
 	return (
-		<BrowserRouter>
-			<div className="wrapper">
-				<Header />
-				<Navbar />
-				<div className="content">
-					<Route path="/profile" render={() => <Profile state={profilePage} />} />
-					<Route path="/dialogs" render={() => <Dialogs state={dialogsPage} />} />
-					<Route path="/music" component={Music} />
-					<Route path="/news" component={News} />
-					<Route path="/settings" component={Settings} />
-				</div>
+		<div className="wrapper">
+			<Header />
+			<Navbar />
+			<div className="content">
+				<Route path="/profile" render={() => <Profile state={profilePage} />} />
+				<Route path="/dialogs" render={() => <Dialogs state={dialogsPage} />} />
+				<Route path="/music" component={Music} />
+				<Route path="/news" component={News} />
+				<Route path="/settings" component={Settings} />
 			</div>
-		</BrowserRouter>
+		</div>
 	);
 };
 
