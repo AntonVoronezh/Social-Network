@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import state from './redux/state';
-import { addPost, addNewMessageText, subscribe } from './redux/state';
+import store from './redux/state';
+debugger
 
 const reRender = state => {
 	const application = (
