@@ -14,13 +14,20 @@ const MyPosts = props => {
 		addPost(textareaData.current.value);
 		textareaData.current.value = '';
 	};
+	const textareaHandler = () => {
+		console.log('textareaHandler from MyPosts ', textareaData.current.value);
+		// addPost(textareaData.current.value);
+		// textareaData.current.value = '';
+	};
+
+
 
 	return (
 		<div className={classes.content}>
 			<h3>New post</h3>
 			<div>
 				<div>
-					<textarea ref={textareaData} />
+					<textarea ref={textareaData} onChange={textareaHandler} />
 				</div>
 				<div>
 					<button onClick={buttonHandler}>sub</button>
