@@ -1,5 +1,3 @@
-// export const subscribe = observer => (reRender = observer);
-
 const store = {
 	_state: {
 		profilePage: {
@@ -49,6 +47,9 @@ const store = {
 	addNewMessageText(text) {
 		this._state.profilePage.newMessageText = text;
 		this._reRender(this._state);
+	},
+	subscribe(observer) {
+		this._reRender = observer;
 	},
 };
 

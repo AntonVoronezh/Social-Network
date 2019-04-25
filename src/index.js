@@ -5,20 +5,23 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/state';
-debugger
 
 const reRender = state => {
 	const application = (
 		<BrowserRouter>
-			<App state={state} addPost={addPost} addNewMessageText={addNewMessageText} />
+			<App
+				state={state}
+				addPost={store.addPost.bind(store)}
+				addNewMessageText={store.addNewMessageText.bind(store)}
+			/>
 		</BrowserRouter>
 	);
 
 	ReactDOM.render(application, document.getElementById('root'));
 };
 
-reRender(state);
-subscribe(reRender);
+reRender(store.getState());
+store.subscribe(reRender);
 
 // ReactDOM.render(application, document.getElementById('root'));
 
