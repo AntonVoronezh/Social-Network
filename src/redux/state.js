@@ -24,20 +24,19 @@ const state = {
 
 window.state = state;
 
-export const addPost = message => {
+export const addPost = () => {
 	const newPost = {
 		id: 5,
-		message,
+		message: state.profilePage.newMessageText,
 		likeCount: 0,
 	};
 
 	state.profilePage.posts.push(newPost);
+	state.profilePage.newMessageText = '';
 	reRender(state);
 };
 
 export const addNewMessageText = text => {
-	// console.log('addNewMessageText in state', text);
-
 	state.profilePage.newMessageText = text;
 	reRender(state);
 };

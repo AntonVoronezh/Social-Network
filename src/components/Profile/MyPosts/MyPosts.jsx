@@ -11,11 +11,11 @@ const MyPosts = props => {
 
 	const buttonHandler = () => {
 		// console.log('buttonHandler from MyPosts ', textareaData.current.value);
-		addPost(textareaData.current.value);
-		textareaData.current.value = '';
+		addPost();
+		// textareaData.current.value = '';
 	};
 	const textareaHandler = () => {
-		console.log('textareaHandler from MyPosts ', textareaData.current.value);
+		// console.log('textareaHandler from MyPosts ', textareaData.current.value);
 		addNewMessageText(textareaData.current.value);
 		// textareaData.current.value = '';
 	};
