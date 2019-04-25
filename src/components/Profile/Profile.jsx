@@ -5,12 +5,17 @@ import MyProfile from './MyProfile/MyProfile';
 
 const Profile = props => {
 	const { posts, newMessageText } = props.state;
-	const { addPost } = props;
-
+	const { addPost, addNewMessageText } = props;
+	
 	return (
 		<div className={classes.content}>
 			<MyProfile />
-			<MyPosts posts={posts} addPost={addPost} newMessageText={newMessageText}/>
+			<MyPosts
+				posts={posts}
+				addPost={addPost}
+				newMessageText={newMessageText}
+				addNewMessageText={addNewMessageText}
+			/>
 		</div>
 	);
 };

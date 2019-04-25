@@ -1,4 +1,4 @@
-import reRender from '../render'
+import reRender from '../render';
 
 const state = {
 	profilePage: {
@@ -22,6 +22,8 @@ const state = {
 	},
 };
 
+window.state = state;
+
 export const addPost = message => {
 	const newPost = {
 		id: 5,
@@ -30,6 +32,13 @@ export const addPost = message => {
 	};
 
 	state.profilePage.posts.push(newPost);
+	reRender(state);
+};
+
+export const addNewMessageText = text => {
+	// console.log('addNewMessageText in state', text);
+
+	state.profilePage.newMessageText = text;
 	reRender(state);
 };
 
