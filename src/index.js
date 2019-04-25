@@ -4,11 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import state from './redux/state';
+import state, { addPost } from './redux/state';
 
 const application = (
 	<BrowserRouter>
-		<App state={state} />
+		<App state={state} addPost={addPost} />
 	</BrowserRouter>
 );
 

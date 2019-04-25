@@ -3,12 +3,15 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = props => {
-	const postsData = props.posts.map(p => <Post message={p.message} id={p.id} key={p.id} likeCount={p.likeCount} />);
+	const { posts, addPost } = props;
+	
+	const postsData = posts.map(p => <Post message={p.message} id={p.id} key={p.id} likeCount={p.likeCount} />);
 
 	const textareaData = React.createRef();
 
 	const buttonHandler = () => {
-		console.log('buttonHandler from MyPosts ', textareaData.current.value);
+		// console.log('buttonHandler from MyPosts ', textareaData.current.value);
+		addPost(textareaData.current.value);
 	};
 
 	return (
