@@ -3,7 +3,7 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = props => {
-	const { posts, addPost } = props;
+	const { posts, addPost, newMessageText } = props;
 
 	const postsData = posts.map(p => <Post message={p.message} id={p.id} key={p.id} likeCount={p.likeCount} />);
 
@@ -27,7 +27,7 @@ const MyPosts = props => {
 			<h3>New post</h3>
 			<div>
 				<div>
-					<textarea ref={textareaData} onChange={textareaHandler} />
+					<textarea ref={textareaData} onChange={textareaHandler} value={newMessageText}/>
 				</div>
 				<div>
 					<button onClick={buttonHandler}>sub</button>
