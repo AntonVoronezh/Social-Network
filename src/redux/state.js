@@ -1,5 +1,3 @@
-import reRender from '../render';
-
 const state = {
 	profilePage: {
 		posts: [{ id: 1, message: 'aaaaa aaaaaa', likeCount: 11 }, { id: 2, message: 'bbbbbb bbbbb', likeCount: 16 }],
@@ -24,6 +22,8 @@ const state = {
 
 window.state = state;
 
+let reRender = () => console.log('state reRender');
+
 export const addPost = () => {
 	const newPost = {
 		id: 5,
@@ -40,5 +40,7 @@ export const addNewMessageText = text => {
 	state.profilePage.newMessageText = text;
 	reRender(state);
 };
+
+export const subscribe = observer => reRender = observer;
 
 export default state;
