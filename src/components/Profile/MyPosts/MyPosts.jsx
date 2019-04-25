@@ -4,7 +4,7 @@ import Post from './Post/Post';
 
 const MyPosts = props => {
 	const { posts, addPost } = props;
-	
+
 	const postsData = posts.map(p => <Post message={p.message} id={p.id} key={p.id} likeCount={p.likeCount} />);
 
 	const textareaData = React.createRef();
@@ -12,6 +12,7 @@ const MyPosts = props => {
 	const buttonHandler = () => {
 		// console.log('buttonHandler from MyPosts ', textareaData.current.value);
 		addPost(textareaData.current.value);
+		textareaData.current.value = '';
 	};
 
 	return (

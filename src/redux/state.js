@@ -1,3 +1,5 @@
+import reRender from '../render'
+
 const state = {
 	profilePage: {
 		posts: [{ id: 1, message: 'aaaaa aaaaaa', likeCount: 11 }, { id: 2, message: 'bbbbbb bbbbb', likeCount: 16 }],
@@ -27,6 +29,7 @@ export const addPost = message => {
 	};
 
 	state.profilePage.posts.push(newPost);
+	reRender(state);
 };
 
 export default state;
