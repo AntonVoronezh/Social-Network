@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import store from './redux/store';
+import store from './redux/reduxStore';
 
 const reRender = state => {
 	const application = (
@@ -17,7 +17,7 @@ const reRender = state => {
 };
 
 reRender(store.getState());
-store.subscribe(reRender);
+store.subscribe(() => reRender(store.getState()));
 
 // ReactDOM.render(application, document.getElementById('root'));
 
