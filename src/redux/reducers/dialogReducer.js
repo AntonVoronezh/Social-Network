@@ -3,19 +3,18 @@ const ADD_DIALOG = 'ADD_DIALOG';
 
 const dialogReducer = (state, action) => {
 	switch (action.type) {
-		case ADD_POST:
-			const newPost = {
-				id: 5,
-				message: state.newMessageText,
-				likeCount: 0,
+		case ADD_DIALOG:
+			const newDialog = {
+				id: 4,
+				text: state.newDialogText,
 			};
 
-			state.posts.push(newPost);
-			state.newMessageText = '';
+			state.messages.push(newDialog);
+			state.newDialogText = '';
 			return state;
 
-		case ADD_NEW_MESSAGE_TEXT:
-			state.newMessageText = action.text;
+		case ADD_NEW_DIALOG_TEXT:
+			state.newDialogText = action.text;
 			return state;
 
 		default:
@@ -27,4 +26,3 @@ export default dialogReducer;
 
 export const addDialogActionCreator = () => ({ type: ADD_DIALOG });
 export const addNewDialogActionCreator = text => ({ type: ADD_NEW_DIALOG_TEXT, text });
-
