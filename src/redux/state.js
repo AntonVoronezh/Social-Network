@@ -32,25 +32,45 @@ const store = {
 		return this._state;
 	},
 
-	addPost() {
-		const newPost = {
-			id: 5,
-			message: this._state.profilePage.newMessageText,
-			likeCount: 0,
-		};
-
-		this._state.profilePage.posts.push(newPost);
-		this._state.profilePage.newMessageText = '';
-		this._reRender(this._state);
-	},
-
-	addNewMessageText(text) {
-		this._state.profilePage.newMessageText = text;
-		this._reRender(this._state);
-	},
 	subscribe(observer) {
 		this._reRender = observer;
 	},
+
+	dispatch(action) {
+		if(action.type === 'ADD_POST') {
+			const newPost = {
+				id: 5,
+				message: this._state.profilePage.newMessageText,
+				likeCount: 0,
+			};
+	
+			this._state.profilePage.posts.push(newPost);
+			this._state.profilePage.newMessageText = '';
+			this._reRender(this._state);
+
+		} else if (action.type === 'ADD_NEW_MESSAGE_TEXT') {
+			this._state.profilePage.newMessageText = action.text;
+			this._reRender(this._state);
+		}
+	}
+
+	// addPost() {
+	// 	const newPost = {
+	// 		id: 5,
+	// 		message: this._state.profilePage.newMessageText,
+	// 		likeCount: 0,
+	// 	};
+
+	// 	this._state.profilePage.posts.push(newPost);
+	// 	this._state.profilePage.newMessageText = '';
+	// 	this._reRender(this._state);
+	// },
+
+	// addNewMessageText(text) {
+	// 	this._state.profilePage.newMessageText = text;
+	// 	this._reRender(this._state);
+	// },
+
 };
 
 window.store = store;
