@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 import Dialog from './Dialog/Dialog';
 import Message from './Message/Message';
-import { addNewDialogActionCreator } from '../../redux/state';
+import { addNewDialogActionCreator, addDialogActionCreator } from '../../redux/store';
 
 const Dialogs = props => {
 	const { dialogs, messages, newDialogText } = props.state;
@@ -14,7 +14,9 @@ const Dialogs = props => {
 	const textareaData = React.createRef();
 
 	const buttonHandler = () => {
-		console.log('buttonHandler from Dialogs ', textareaData.current.value);
+		const action = addDialogActionCreator();
+
+		dispatch(action);
 	};
 
 	const textareaHandler = () => {
