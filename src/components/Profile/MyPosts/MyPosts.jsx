@@ -2,6 +2,9 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
+const addPostActionCreator = () => ({ type: 'ADD_POST' });
+const addNewMessageActionCreator = text => ({ type: 'ADD_NEW_MESSAGE_TEXT', text });
+
 const MyPosts = props => {
 	const { posts, dispatch, newMessageText } = props;
 
@@ -10,13 +13,13 @@ const MyPosts = props => {
 	const textareaData = React.createRef();
 
 	const buttonHandler = () => {
-		const action = { type: 'ADD_POST' };
+		const action = addPostActionCreator();
 
 		dispatch(action);
 	};
 	const textareaHandler = () => {
 		const text = textareaData.current.value;
-		const action = { type: 'ADD_NEW_MESSAGE_TEXT', text };
+		const action = addNewMessageActionCreator(text);
 
 		dispatch(action);
 	};
