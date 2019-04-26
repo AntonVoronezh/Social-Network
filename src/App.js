@@ -11,19 +11,14 @@ import Settings from './components/Settings/Settings';
 
 const App = props => {
 	const { profilePage, dialogsPage } = props.state;
-	const { addPost, addNewMessageText } = props;
+	const { dispatch } = props;
 
 	return (
 		<div className="wrapper">
 			<Header />
 			<Navbar />
 			<div className="content">
-				<Route
-					path="/profile"
-					render={() => (
-						<Profile state={profilePage} addPost={addPost} addNewMessageText={addNewMessageText} />
-					)}
-				/>
+				<Route path="/profile" render={() => <Profile state={profilePage} dispatch={dispatch} />} />
 				<Route path="/dialogs" render={() => <Dialogs state={dialogsPage} />} />
 				<Route path="/music" component={Music} />
 				<Route path="/news" component={News} />

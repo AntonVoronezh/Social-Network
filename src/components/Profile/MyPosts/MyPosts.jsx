@@ -3,21 +3,22 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = props => {
-	const { posts, addPost, newMessageText, addNewMessageText } = props;
+	const { posts, dispatch, newMessageText } = props;
 
 	const postsData = posts.map(p => <Post message={p.message} id={p.id} key={p.id} likeCount={p.likeCount} />);
 
 	const textareaData = React.createRef();
 
 	const buttonHandler = () => {
-		// console.log('buttonHandler from MyPosts ', textareaData.current.value);
-		addPost();
-		// textareaData.current.value = '';
+		const action = { type: 'ADD_POST' };
+
+		dispatch(action);
 	};
 	const textareaHandler = () => {
-		// console.log('textareaHandler from MyPosts ', textareaData.current.value);
-		addNewMessageText(textareaData.current.value);
-		// textareaData.current.value = '';
+		const text = textareaData.current.value;
+		const action = { type: 'ADD_NEW_MESSAGE_TEXT', text };
+
+		dispatch(action);
 	};
 
 	return (

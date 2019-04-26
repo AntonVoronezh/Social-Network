@@ -9,11 +9,7 @@ import store from './redux/state';
 const reRender = state => {
 	const application = (
 		<BrowserRouter>
-			<App
-				state={state}
-				addPost={store.addPost.bind(store)}
-				addNewMessageText={store.addNewMessageText.bind(store)}
-			/>
+			<App state={state} dispatch={store.dispatch.bind(store)} />
 		</BrowserRouter>
 	);
 
