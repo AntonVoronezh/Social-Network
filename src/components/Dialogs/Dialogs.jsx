@@ -11,7 +11,7 @@ const Dialogs = props => {
 	const dialogsData = dialogs.map(d => <Dialog name={d.name} id={d.id} key={d.id} />);
 	const messagesData = messages.map(m => <Message text={m.text} id={m.id} key={m.id} />);
 
-	const textareaData = React.createRef();
+	// const textareaData = React.createRef();
 
 	const buttonHandler = () => {
 		const action = addDialogActionCreator();
@@ -19,8 +19,9 @@ const Dialogs = props => {
 		dispatch(action);
 	};
 
-	const textareaHandler = () => {
-		const text = textareaData.current.value;
+	const textareaHandler = event => {
+		// const text = textareaData.current.value;
+		const text = event.target.value;
 		const action = addNewDialogActionCreator(text);
 
 		dispatch(action);
@@ -32,7 +33,8 @@ const Dialogs = props => {
 			<div className={classes.messages}>
 				{messagesData}
 				<div>
-					<textarea ref={textareaData} value={newDialogText} onChange={textareaHandler} />
+					{/* <textarea ref={textareaData} value={newDialogText} onChange={textareaHandler} /> */}
+					<textarea value={newDialogText} onChange={textareaHandler} />
 				</div>
 				<div>
 					<button onClick={buttonHandler}>sub</button>
