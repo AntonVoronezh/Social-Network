@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD_POST';
 const ADD_NEW_MESSAGE_TEXT = 'ADD_NEW_MESSAGE_TEXT';
+const ADD_NEW_DIALOG_TEXT = 'ADD_NEW_DIALOG_TEXT';
 
 const store = {
 	_state: {
@@ -16,6 +17,7 @@ const store = {
 				{ id: 2, text: '222 2222 22222 22222' },
 				{ id: 3, text: '33 33 333333 3333' },
 			],
+			newDialogText: '+++',
 			dialogs: [
 				{ id: 1, name: '1111111' },
 				{ id: 2, name: '2222222' },
@@ -53,6 +55,11 @@ const store = {
 		} else if (action.type === ADD_NEW_MESSAGE_TEXT) {
 			this._state.profilePage.newMessageText = action.text;
 			this._reRender(this._state);
+		} else if (action.type === ADD_NEW_DIALOG_TEXT) {
+			this._state.dialogsPage.newDialogText = action.text;
+			this._reRender(this._state);
+		} else {
+			console.log('I don`t now ', action.type);
 		}
 	},
 
@@ -77,6 +84,8 @@ const store = {
 export const addPostActionCreator = () => ({ type: ADD_POST });
 
 export const addNewMessageActionCreator = text => ({ type: ADD_NEW_MESSAGE_TEXT, text });
+
+export const addNewDialogActionCreator = text => ({ type: ADD_NEW_DIALOG_TEXT, text });
 
 window.store = store;
 
