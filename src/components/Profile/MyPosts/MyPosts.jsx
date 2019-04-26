@@ -1,9 +1,7 @@
 import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-
-const addPostActionCreator = () => ({ type: 'ADD_POST' });
-const addNewMessageActionCreator = text => ({ type: 'ADD_NEW_MESSAGE_TEXT', text });
+import { addPostActionCreator, addNewMessageActionCreator } from '../../../redux/state';
 
 const MyPosts = props => {
 	const { posts, dispatch, newMessageText } = props;
