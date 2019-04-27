@@ -3,7 +3,7 @@ import classes from './MyProfile.module.css';
 
 const MyProfile = props => {
 	return (
-		<div>
+		<div className={classes.wrap}>
 			<div>
 				<img src="https://awesomeworld.ru/wp-content/uploads/2017/11/nebo_7-560x280.jpg" alt="d" />
 			</div>

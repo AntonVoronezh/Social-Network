@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
-import MyProfile from './MyProfile/MyProfile';
+import MyProfileContainer from './MyProfile/MyProfileContainer';
 
 const Profile = props => {
 	const { posts, newMessageText } = props.state;
@@ -9,7 +9,7 @@ const Profile = props => {
 
 	return (
 		<div className={classes.content}>
-			<MyProfile />
+			<MyProfileContainer />
 			<MyPosts posts={posts} dispatch={dispatch} newMessageText={newMessageText} />
 		</div>
 	);
