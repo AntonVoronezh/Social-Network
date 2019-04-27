@@ -2,14 +2,16 @@ import React from 'react';
 import classes from './Textarea.module.css';
 
 const Textarea = props => {
+	const {textareaHandler, newMessageText, placeholder, text} = props;
+
 	return (
 		<textarea
 			className={classes.item}
-			onChange={props.textareaHandler}
-			value={props.newMessageText}
-			placeholder={props.placeholder}
+			onChange={textareaHandler}
+			value={newMessageText}
+			placeholder={placeholder}
 		>
-			{props.text}
+			{text}
 		</textarea>
 	);
 };
