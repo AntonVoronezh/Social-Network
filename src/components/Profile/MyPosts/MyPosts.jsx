@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 import Button from '../../UI/Button/Button';
+import Textarea from '../../UI/Textarea/Textarea';
 
 const MyPosts = props => {
 	const { addPostCallback, addNewMessageCallback, newMessageText, posts } = props;
@@ -22,7 +23,7 @@ const MyPosts = props => {
 			<h3>New post</h3>
 			<div>
 				<div>
-					<textarea onChange={textareaHandler} value={newMessageText} />
+					<Textarea textareaHandler={textareaHandler} value={newMessageText} placeholder={''}/>
 				</div>
 				<div>
 					<Button buttonHandler={buttonHandler} text={'Добавить'} />

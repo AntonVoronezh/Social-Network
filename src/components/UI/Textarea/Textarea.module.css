@@ -1,7 +1,6 @@
 .item {
-    background-color: #fff;
+    background-color: rgb(232, 250, 75);
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
-    text-transform: uppercase;
 }
