@@ -1,6 +1,12 @@
 import React from 'react';
-import classes from './Message.module.css';
+import Message from './Message'
 
-const Message = props => <div className={classes.message}>{props.text}</div>;
+const MessageContainer = props => {
+	const { messages } = props;
+	
+	const messagesData = messages.map(m => <Message text={m.text} id={m.id} key={m.id} />);
 
-export default Message;
+	return <div>{messagesData}</div>;
+};
+
+export default MessageContainer;
