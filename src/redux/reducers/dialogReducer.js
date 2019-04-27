@@ -16,7 +16,7 @@ const initialState = {
 		{ id: 5, name: '5555555' },
 		{ id: 6, name: '6666666' },
 	],
-}
+};
 
 const dialogReducer = (state = initialState, action) => {
 	switch (action.type) {

@@ -26,7 +26,7 @@ const MyPosts = props => {
 					<Textarea textareaHandler={textareaHandler} value={newMessageText} placeholder={''}/>
 				</div>
 				<div>
-					<Button buttonHandler={buttonHandler} text={'Добавить'} />
+					<Button buttonHandler={buttonHandler} text={'Добавить пост'} />
 				</div>
 			</div>
 			<div className={classes.posts}>{postsData}</div>

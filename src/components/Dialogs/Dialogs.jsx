@@ -3,6 +3,8 @@ import classes from './Dialogs.module.css';
 import DialogContainer from './Dialog/DialogContainer';
 import MessageContainer from './Message/MessageContainer';
 import { addNewDialogActionCreator, addDialogActionCreator } from '../../redux/reducers/dialogReducer';
+import Button from '../UI/Button/Button';
+import Textarea from '../UI/Textarea/Textarea';
 
 const Dialogs = props => {
 	const { dialogs, messages, newDialogText } = props.state;
@@ -32,10 +34,10 @@ const Dialogs = props => {
 				</div>
 				<div>
 					<div>
-						<textarea value={newDialogText} onChange={textareaHandler} />
+						<Textarea textareaHandler={textareaHandler} value={newDialogText} placeholder={''}/>
 					</div>
 					<div>
-						<button onClick={buttonHandler}>sub</button>
+						<Button buttonHandler={buttonHandler} text={'Добавить'} />
 					</div>
 				</div>
 			</div>
