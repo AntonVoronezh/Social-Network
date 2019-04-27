@@ -12,7 +12,7 @@ const MyPosts = props => {
 	};
 	const textareaHandler = event => {
 		const text = event.target.value;
-
+		
 		addNewMessageCallback(text);
 	};
 

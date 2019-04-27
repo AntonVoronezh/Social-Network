@@ -11,8 +11,7 @@ const MyPostsContainer = props => {
 
 		dispatch(action);
 	};
-	const addNewMessageCallback = event => {
-		const text = event.target.value;
+	const addNewMessageCallback = text => {
 		const action = addNewMessageActionCreator(text);
 
 		dispatch(action);
