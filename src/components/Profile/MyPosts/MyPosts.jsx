@@ -1,23 +1,19 @@
 import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-import { addPostActionCreator, addNewMessageActionCreator } from '../../../redux/reducers/profileReducer';
 
 const MyPosts = props => {
-	const { posts, dispatch, newMessageText } = props;
+	const { addPostCallback, addNewMessageCallback, newMessageText, posts } = props;
 
 	const postsData = posts.map(p => <Post message={p.message} id={p.id} key={p.id} likeCount={p.likeCount} />);
 
 	const buttonHandler = () => {
-		const action = addPostActionCreator();
-
-		dispatch(action);
+		addPostCallback();
 	};
 	const textareaHandler = event => {
 		const text = event.target.value;
-		const action = addNewMessageActionCreator(text);
 
-		dispatch(action);
+		addNewMessageCallback(text);
 	};
 
 	return (

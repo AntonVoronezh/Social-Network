@@ -23,6 +23,7 @@ const MyPostsContainer = props => {
 			newMessageText={newMessageText}
 			addPostCallback={addPostCallback}
 			addNewMessageCallback={addNewMessageCallback}
+			posts={posts}
 		/>
 	);
 };
