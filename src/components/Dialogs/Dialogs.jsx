@@ -54,7 +54,7 @@ const Dialogs = () => {
 			</div>
 			<div className={classes.rightBlock}>
 				<div className={classes.messages}>
-					{/* <MessageContainer /> */}
+					<MessageContainer />
 				</div>
 				<div className={classes.form}>
 					{/* <DialogFormContainer /> */}
