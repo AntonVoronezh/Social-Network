@@ -27,7 +27,12 @@ import { connect } from 'react-redux';
 // 	);
 // };
 
-
+const mapStateToProps = state => {
+	return {
+		newMessageText: state.profilePage.newMessageText,
+		posts: state.profilePage.posts,
+	};
+};
 
 
 
