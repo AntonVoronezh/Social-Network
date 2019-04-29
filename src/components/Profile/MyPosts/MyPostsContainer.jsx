@@ -36,7 +36,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-
+		addPostCallback: () => {
+			const action = addPostActionCreator();
+			dispatch(action);
+		},
 
 	};
 };
