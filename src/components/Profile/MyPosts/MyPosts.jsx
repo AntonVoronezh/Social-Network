@@ -1,8 +1,9 @@
 import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-import Button from '../../UI/Button/Button';
-import Textarea from '../../UI/Textarea/Textarea';
+import ProfileFormContainer from '../ProfileForm/ProfileFormContainer';
+// import Button from '../../UI/Button/Button';
+// import Textarea from '../../UI/Textarea/Textarea';
 
 const MyPosts = props => {
 	const { addPostCallback, addNewMessageCallback, newMessageText, posts } = props;
@@ -12,6 +13,7 @@ const MyPosts = props => {
 	const buttonHandler = () => {
 		addPostCallback();
 	};
+
 	const textareaHandler = event => {
 		const text = event.target.value;
 
@@ -22,12 +24,13 @@ const MyPosts = props => {
 		<div className={classes.content}>
 			<h3>New post</h3>
 			<div>
-				<div>
-					<Textarea textareaHandler={textareaHandler} value={newMessageText} placeholder={''}/>
-				</div>
-				<div>
-					<Button buttonHandler={buttonHandler} text={'Добавить пост'} />
-				</div>
+				{/* <Textarea textareaHandler={textareaHandler} value={newMessageText} placeholder={''} />
+					{/* <textarea onChange={textareaHandler} value={newMessageText} placeholder={''} /> */}
+				{/* </div>
+				<div> */}
+				{/* <Button buttonHandler={buttonHandler} text={'Добавить пост'} /> */}
+				{/* </div> */}
+				<ProfileFormContainer />
 			</div>
 			<div className={classes.posts}>{postsData}</div>
 		</div>
