@@ -21,7 +21,7 @@ const reRender = () => {
 };
 
 reRender(store.getState());
-store.subscribe(() => reRender(store.getState()));
+// store.subscribe(() => reRender(store.getState()));
 
 // ReactDOM.render(application, document.getElementById('root'));
 
