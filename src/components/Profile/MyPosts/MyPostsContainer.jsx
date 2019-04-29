@@ -34,7 +34,12 @@ const mapStateToProps = state => {
 	};
 };
 
+const mapDispatchToProps = dispatch => {
+	return {
 
+
+	};
+};
 
 const MyPostsContainer = connect(
 	mapStateToProps,
