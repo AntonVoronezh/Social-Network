@@ -11,7 +11,7 @@ const DialogForm = props => {
 	const textareaHandler = event => {
 		const text = event.target.value;
 
-		props.addNewDialogActionCreator(text);
+		props.addNewDialogTextCallback(text);
 	};
 
 	return (

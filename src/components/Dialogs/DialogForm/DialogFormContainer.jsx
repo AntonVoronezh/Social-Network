@@ -1,7 +1,13 @@
-import React from 'react';
+// import React from 'react';
 import DialogForm from './DialogForm';
 import { connect } from 'react-redux';
 import { addNewDialogActionCreator, addDialogActionCreator } from '../../../redux/reducers/dialogReducer';
+
+const mapStateToProps = state => {
+	return {
+		newMessageText: state.profilePage.newMessageText
+	}
+}
 
 const mapDispatchToProps = dispatch => {
 	return {
@@ -16,6 +22,6 @@ const mapDispatchToProps = dispatch => {
 	};
 };
 
-const DialogFormContainer = connect(null, mapDispatchToProps)(DialogForm);
+const DialogFormContainer = connect(mapStateToProps, mapDispatchToProps)(DialogForm);
 
 export default DialogFormContainer;
