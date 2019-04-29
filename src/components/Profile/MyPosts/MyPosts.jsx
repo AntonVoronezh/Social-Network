@@ -12,6 +12,7 @@ const MyPosts = props => {
 	const buttonHandler = () => {
 		addPostCallback();
 	};
+
 	const textareaHandler = event => {
 		const text = event.target.value;
 
@@ -23,7 +24,8 @@ const MyPosts = props => {
 			<h3>New post</h3>
 			<div>
 				<div>
-					<Textarea textareaHandler={textareaHandler} value={newMessageText} placeholder={''}/>
+					<Textarea textareaHandler={textareaHandler} value={newMessageText} placeholder={''} />
+					{/* <textarea onChange={textareaHandler} value={newMessageText} placeholder={''} /> */}
 				</div>
 				<div>
 					<Button buttonHandler={buttonHandler} text={'Добавить пост'} />

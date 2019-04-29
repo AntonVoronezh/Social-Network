@@ -17,8 +17,6 @@ const profileReducer = (state = initialState, action) => {
 
 			state.posts.push(newPost);
 			state.newMessageText = '';
-			console.log('ADD_POST');
-			
 			return state;
 
 		case ADD_NEW_MESSAGE_TEXT:
