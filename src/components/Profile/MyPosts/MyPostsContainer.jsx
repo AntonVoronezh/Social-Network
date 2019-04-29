@@ -40,7 +40,10 @@ const mapDispatchToProps = dispatch => {
 			const action = addPostActionCreator();
 			dispatch(action);
 		},
-
+		addNewMessageCallback: text => {
+			const action = addNewMessageActionCreator(text);
+			dispatch(action);
+		},
 	};
 };
 
