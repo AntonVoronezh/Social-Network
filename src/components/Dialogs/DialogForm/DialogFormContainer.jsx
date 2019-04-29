@@ -5,7 +5,7 @@ import { addNewDialogActionCreator, addDialogActionCreator } from '../../../redu
 
 const mapStateToProps = state => {
 	return {
-		newMessageText: state.profilePage.newMessageText
+		newDialogText: state.dialogsPage.newDialogText
 	}
 }
 

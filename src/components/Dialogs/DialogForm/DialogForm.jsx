@@ -16,7 +16,7 @@ const DialogForm = props => {
 
 	return (
 		<div className={classes.form}>
-			<Textarea textareaHandler={textareaHandler} value={props.newMessageText} placeholder={''} />
+			<Textarea textareaHandler={textareaHandler} value={props.newDialogText} placeholder={''} />
 			<Button buttonHandler={buttonHandler} text={'Добавить пост'} />
 		</div>
 	);

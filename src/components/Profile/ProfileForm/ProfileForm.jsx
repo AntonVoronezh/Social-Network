@@ -1,17 +1,17 @@
 import React from 'react';
-import classes from './DialogForm.module.css';
+import classes from './ProfileForm.module.css';
 import Textarea from '../../UI/Textarea/Textarea';
 import Button from '../../UI/Button/Button';
 
-const DialogForm = props => {
+const ProfileForm = props => {
 	const buttonHandler = () => {
-		props.addDialogCallback();
+		props.addPostCallback();
 	};
 
 	const textareaHandler = event => {
 		const text = event.target.value;
 
-		props.addNewDialogTextCallback(text);
+		props.addNewMessageTextCallback(text);
 	};
 
 	return (
@@ -22,4 +22,4 @@ const DialogForm = props => {
 	);
 };
 
-export default DialogForm;
+export default ProfileForm;

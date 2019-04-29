@@ -1,7 +1,7 @@
 // import React from 'react';
-import DialogForm from './DialogForm';
+import ProfileForm from './ProfileForm';
 import { connect } from 'react-redux';
-import { addNewDialogActionCreator, addDialogActionCreator } from '../../../redux/reducers/dialogReducer';
+import { addNewMessageActionCreator, addPostActionCreator } from '../../../redux/reducers/profileReducer';
 
 const mapStateToProps = state => {
 	return {
@@ -11,17 +11,17 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		addDialogCallback: () => {
-			const action = addDialogActionCreator();
+		addPostCallback: () => {
+			const action = addPostActionCreator();
 			dispatch(action);
 		},
-		addNewDialogTextCallback: text => {
-			const action = addNewDialogActionCreator(text);
+		addNewMessageTextCallback: text => {
+			const action = addNewMessageActionCreator(text);
 			dispatch(action);
 		},
 	};
 };
 
-const DialogFormContainer = connect(mapStateToProps, mapDispatchToProps)(DialogForm);
+const ProfileFormContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileForm);
 
-export default DialogFormContainer;
+export default ProfileFormContainer;
