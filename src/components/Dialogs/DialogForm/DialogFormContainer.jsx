@@ -1,15 +1,15 @@
 import React from 'react';
 import DialogForm from './DialogForm';
 import { connect } from 'react-redux';
-import { addNewDialogActionCreator, addDialogActionCreator } from '../../redux/reducers/dialogReducer';
+import { addNewDialogActionCreator, addDialogActionCreator } from '../../../redux/reducers/dialogReducer';
 
 const mapDispatchToProps = dispatch => {
 	return {
-		addPostCallback: () => {
+		addDialogCallback: () => {
 			const action = addDialogActionCreator();
 			dispatch(action);
 		},
-		addNewMessageCallback: text => {
+		addNewDialogTextCallback: text => {
 			const action = addNewDialogActionCreator(text);
 			dispatch(action);
 		},
