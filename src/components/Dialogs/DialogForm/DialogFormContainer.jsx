@@ -1,12 +1,8 @@
-import React from './node_modules/react';
-import Message from './DialogForm'
+import React from 'react';
+import DialogForm from './DialogForm';
 
-const MessageContainer = props => {
-	const { messages } = props;
-	
-	const messagesData = messages.map(m => <Message text={m.text} id={m.id} key={m.id} />);
-
-	return <div>{messagesData}</div>;
+const DialogFormContainer = () => {
+	return <div>dialog form</div>;
 };
 
-export default MessageContainer;
+export default DialogFormContainer;

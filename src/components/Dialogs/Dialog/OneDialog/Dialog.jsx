@@ -4,6 +4,7 @@ import classes from './Dialog.module.css';
 
 const Dialog = props => {
 	const path = `/dialogs/${props.id}`;
+	// 	const dialogsData = dialogs.map(d => <Dialog name={d.name} id={d.id} key={d.id} />);
 
 	return (
 		<div className={`${classes.item}`}>

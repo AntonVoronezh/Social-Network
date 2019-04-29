@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 import DialogContainer from './Dialog/DialogContainer';
 import MessageContainer from './Message/MessageContainer';
+import DialogFormContainer from './DialogForm/DialogFormContainer'
 import { addNewDialogActionCreator, addDialogActionCreator } from '../../redux/reducers/dialogReducer';
 import Button from '../UI/Button/Button';
 import Textarea from '../UI/Textarea/Textarea';
@@ -53,10 +54,10 @@ const Dialogs = () => {
 			</div>
 			<div className={classes.rightBlock}>
 				<div className={classes.messages}>
-					<MessageContainer />
+					{/* <MessageContainer /> */}
 				</div>
 				<div className={classes.form}>
-					<DialogFormContainer />
+					{/* <DialogFormContainer /> */}
 				</div>
 			</div>
 		</div>

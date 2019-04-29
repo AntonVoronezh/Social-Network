@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import classes from './Message.module.css';
+import React from 'react';
+import classes from './DialogForm.module.css';
 
 const Message = props => <div className={classes.message}>{props.text}</div>;
 
