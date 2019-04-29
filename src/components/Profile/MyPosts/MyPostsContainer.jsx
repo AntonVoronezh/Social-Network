@@ -1,29 +1,39 @@
-import React from 'react';
+// import React from 'react';
 import MyPosts from './MyPosts';
 import { addPostActionCreator, addNewMessageActionCreator } from '../../../redux/reducers/profileReducer';
+import { connect } from 'react-redux';
 
-const MyPostsContainer = props => {
-	const { posts, dispatch, newMessageText } = props;
+// const MyPostsContainer = props => {
+// 	const { posts, dispatch, newMessageText } = props;
 
-	const addPostCallback = () => {
-		const action = addPostActionCreator();
+// 	const addPostCallback = () => {
+// 		const action = addPostActionCreator();
 
-		dispatch(action);
-	};
-	const addNewMessageCallback = text => {
-		const action = addNewMessageActionCreator(text);
+// 		dispatch(action);
+// 	};
+// 	const addNewMessageCallback = text => {
+// 		const action = addNewMessageActionCreator(text);
 
-		dispatch(action);
-	};
+// 		dispatch(action);
+// 	};
 
-	return (
-		<MyPosts
-			newMessageText={newMessageText}
-			addPostCallback={addPostCallback}
-			addNewMessageCallback={addNewMessageCallback}
-			posts={posts}
-		/>
-	);
-};
+// 	return (
+// 		<MyPosts
+// 			newMessageText={newMessageText}
+// 			addPostCallback={addPostCallback}
+// 			addNewMessageCallback={addNewMessageCallback}
+// 			posts={posts}
+// 		/>
+// 	);
+// };
+
+
+
+
+
+const MyPostsContainer = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(MyPosts);
 
 export default MyPostsContainer;
