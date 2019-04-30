@@ -1,3 +1,16 @@
 .user {
     display: flex;
 }
+.followBlock {
+    border: 1px solid #000000;
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.infoBlock {
+    border: 1px solid #000000;
+    flex:1;
+    padding: 5px;
+    margin: 5px;
+}
