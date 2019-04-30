@@ -26,13 +26,11 @@ const dialogReducer = (state = initialState, action) => {
 				text: state.newDialogText,
 			};
 
-			let stateCopy = { ...state };
-			stateCopy.messages = [...state.messages];
-
-			stateCopy.messages.push(newDialog);
-			state.newDialogText = '';
-
-			return stateCopy;
+			return {
+				...state,
+				messages: [...state.messages, newDialog],
+				newDialogText: '',
+			};
 		}
 		case ADD_NEW_DIALOG_TEXT: {
 			return { ...state, newDialogText: action.text };
