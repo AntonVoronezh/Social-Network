@@ -6,7 +6,7 @@ import usersReducer from './usersReducer';
 const rootReducer = combineReducers({
 	profilePage: profileReducer,
 	dialogsPage: dialogReducer,
-	uswersPage: usersReducer,
+	usersPage: usersReducer,
 });
 
 export default rootReducer;

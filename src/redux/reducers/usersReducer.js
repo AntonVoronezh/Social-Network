@@ -77,4 +77,4 @@ export default usersReducer;
 
 export const followAC = userId => ({ type: FOLLOW, userId });
 export const unfollowAC = userId => ({ type: UNFOLLOW, userId });
-export const setUsers = users => ({ type: SETUSERS, users });
+export const setUsersAC = users => ({ type: SETUSERS, users });
