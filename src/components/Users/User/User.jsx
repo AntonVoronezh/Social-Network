@@ -3,14 +3,17 @@ import classes from './User.module.css';
 import Button from '../../UI/Button/Button';
 
 const User = props => {
+
+
 	return (
 		<div className={classes.user}>
+		
 			<div className={classes.followBlock}>
 				<img src={props.status.img} alt="dd" />
-				{props.followFlag ? (
-					<Button buttonHandler={props.unfollowCB} text="UnFollow" />
+				{props.status.followFlag ? (
+					<Button buttonHandler={() => props.unfollowCB(props.status.id)} text="UnFollow" />
 				) : (
-					<Button buttonHandler={props.followCB} text="Follow" />
+					<Button buttonHandler={() => props.followCB(props.status.id)} text="Follow" />
 				)}
 			</div>
 			<div className={classes.infoBlock}>
