@@ -38,8 +38,25 @@ const usersReducer = (state = initialState, action) => {
 			return {
 				...state,
 				users: state.users.map(u => {
-					if (u === action.userId) {
-						u.followFlag = true;
+					if (u.id === action.userId) {
+						return {
+							...u,
+							followFlag: true,
+						};
+					}
+					return u;
+				}),
+            };
+            
+		case UNFOLLOW:
+			return {
+				...state,
+				users: state.users.map(u => {
+					if (u.id === action.userId) {
+						return {
+							...u,
+							followFlag: false,
+						};
 					}
 					return u;
 				}),
