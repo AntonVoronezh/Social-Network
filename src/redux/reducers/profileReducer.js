@@ -15,13 +15,11 @@ const profileReducer = (state = initialState, action) => {
 				likeCount: 0,
 			};
 
-			let stateCopy = { ...state };
-			stateCopy.posts = [...state.posts];
-
-			stateCopy.posts.push(newPost);
-			stateCopy.newMessageText = '';
-
-			return stateCopy;
+			return {
+				...state,
+				posts: [...state.posts, newPost],
+				newMessageText: '',
+			};
 		}
 
 		case ADD_NEW_MESSAGE_TEXT: {
