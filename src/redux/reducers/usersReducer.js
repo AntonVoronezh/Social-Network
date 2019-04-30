@@ -63,11 +63,9 @@ const usersReducer = (state = initialState, action) => {
 			};
 
 		case SETUSERS:
-		console.log('SETUSERS', action.users);
-		
 			return {
 				...state,
-				users: [...state.users, ...action.users]
+				users: [...state.users, ...action.users.users]
 			};
 
 		default:
