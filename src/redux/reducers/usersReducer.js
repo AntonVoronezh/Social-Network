@@ -46,8 +46,8 @@ const usersReducer = (state = initialState, action) => {
 					}
 					return u;
 				}),
-            };
-            
+			};
+
 		case UNFOLLOW:
 			return {
 				...state,
@@ -61,6 +61,13 @@ const usersReducer = (state = initialState, action) => {
 					return u;
 				}),
 			};
+
+		case SETUSERS:
+			return {
+				...state,
+				...action.users,
+			};
+
 		default:
 			return state;
 	}
