@@ -15,7 +15,8 @@ const initialState = {
 		{
 			id: 2,
 			followFlag: false,
-			img: 'http://www.youloveit.ru/uploads/posts/2016-04/1460382393_youloveit_ru_avatarki_super_kot_ledi_bug14.png',
+			img:
+				'http://www.youloveit.ru/uploads/posts/2016-04/1460382393_youloveit_ru_avatarki_super_kot_ledi_bug14.png',
 			firstName: 'Имя 2',
 			status: 'Это статус 2',
 			location: { country: 'Страна 2', sity: 'Город 2' },
@@ -30,3 +31,7 @@ const initialState = {
 		},
 	],
 };
+
+export const followAC = userId => ({ type: FOLLOW, userId });
+export const unfollowAC = userId => ({ type: UNFOLLOW, userId });
+export const setUsers = users => ({ type: SETUSERS, users });
