@@ -25,10 +25,10 @@ const profileReducer = (state = initialState, action) => {
 		}
 
 		case ADD_NEW_MESSAGE_TEXT: {
-			let stateCopy = { ...state };
-
-			stateCopy.newMessageText = action.text;
-			return stateCopy;
+			return {
+				...state,
+				newMessageText: action.text,
+			};
 		}
 
 		default:
