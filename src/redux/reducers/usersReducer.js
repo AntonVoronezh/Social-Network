@@ -32,6 +32,25 @@ const initialState = {
 	],
 };
 
+const usersReducer = (state = initialState, action) => {
+	switch (action.type) {
+		case FOLLOW:
+			return {
+				...state,
+				users: state.users.map(u => {
+					if (u === action.userId) {
+						u.followFlag = true;
+					}
+					return u;
+				}),
+			};
+		default:
+			return state;
+	}
+};
+
+export default usersReducer;
+
 export const followAC = userId => ({ type: FOLLOW, userId });
 export const unfollowAC = userId => ({ type: UNFOLLOW, userId });
 export const setUsers = users => ({ type: SETUSERS, users });
