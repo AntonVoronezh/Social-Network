@@ -35,10 +35,7 @@ const dialogReducer = (state = initialState, action) => {
 			return stateCopy;
 		}
 		case ADD_NEW_DIALOG_TEXT: {
-			let stateCopy = { ...state };
-
-			stateCopy.newDialogText = action.text;
-			return stateCopy;
+			return { ...state, newDialogText: action.text };
 		}
 
 		default:
