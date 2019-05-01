@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Users.module.css';
 import User from './User/User';
+import * as axios from 'axios';
 
 const Users = props => {
 	if (props.users.length === 0) {
