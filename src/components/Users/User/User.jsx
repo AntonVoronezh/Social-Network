@@ -1,29 +1,29 @@
 import React from 'react';
 import classes from './User.module.css';
 import Button from '../../UI/Button/Button';
+import Img from '../../../assets/img/1.png'
 
 const User = props => {
-
+	const { photos, name, followFlag, id, status } = props.status;
 
 	return (
 		<div className={classes.user}>
-		
 			<div className={classes.followBlock}>
-				<img src={props.status.img} alt="dd" />
-				{props.status.followFlag ? (
-					<Button buttonHandler={() => props.unfollowCB(props.status.id)} text="UnFollow" />
+				<img src={photos.small} alt={name} />
+				{followFlag ? (
+					<Button buttonHandler={() => props.unfollowCB(id)} text="UnFollow" />
 				) : (
-					<Button buttonHandler={() => props.followCB(props.status.id)} text="Follow" />
+					<Button buttonHandler={() => props.followCB(id)} text="Follow" />
 				)}
 			</div>
 			<div className={classes.infoBlock}>
 				<div>
-					{props.status.firstName}
-					{props.status.status}
+					{name}
+					{status}
 				</div>
 				<div>
-					{props.status.location.country}
-					{props.status.location.sity}
+					{'location.country'}
+					{'location.sity'}
 				</div>
 			</div>
 		</div>
