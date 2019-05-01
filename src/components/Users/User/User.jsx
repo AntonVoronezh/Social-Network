@@ -4,13 +4,13 @@ import Button from '../../UI/Button/Button';
 import Img from '../../../assets/img/1.png'
 
 const User = props => {
-	const { photos, name, followFlag, id, status } = props.status;
+	const { photos, name, followed, id, status } = props.status;
 
 	return (
 		<div className={classes.user}>
 			<div className={classes.followBlock}>
-				<img src={photos.small} alt={name} />
-				{followFlag ? (
+				<img src={photos.small !== null ? photos.small : Img} alt={name} />
+				{followed ? (
 					<Button buttonHandler={() => props.unfollowCB(id)} text="UnFollow" />
 				) : (
 					<Button buttonHandler={() => props.followCB(id)} text="Follow" />
